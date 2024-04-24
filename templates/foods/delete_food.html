@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Deleta Page
+{% endblock %}
+{% block content %}
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+<br><br><br><br><br>
+<!--Footer bilan navbar orasida va block content orasida joy qoldirish uchun '<br>' tegida foydalanildi( chiroyliroq chiqishi uchun)-->
+    <div class="main">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+            Haqiqattan ham o'chirasizmi ?<br><br>
+        <input type="submit" class="btn btn-success" value="Tasdiqlash"> |
+        <button type="button" class="btn btn-danger"><a style="text-decoration: none; color: white" href="/">Bekor qilish</a></button>
+    </form>
+</div>
+<br><br><br><br><br>
+{% endblock %}

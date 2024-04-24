@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Kategoriya O'chirish
+{% endblock %}
+
+{% block content %}
+    <div class="about-main-content">
+         <div style="margin: 50px">
+             <h2>Kategoriya O'chirish</h2>
+             <form action=" " method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" class="btn btn-primary" value="O'chirish">
+            </form>
+         </div>
+    </div>
+{% endblock %}

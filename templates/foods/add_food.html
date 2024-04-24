@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Taom qo'shish
+{% endblock %}
+
+{% block content %}
+    <div class="about-main-content">
+         <div style="margin: 50px">
+             <h2>Yangi Taom Qo'shish</h2>
+             <form action=" " method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" class="btn btn-primary" value="Qo'shish">
+            </form>
+         </div>
+    </div>
+    <script>
+        $( 'input' ).addClass('form-control mb-3');
+        $('text').addClass('form-control mb-3');
+        $( 'select' ).addClass('form-control mb-3');
+    </script>
+{% endblock %}
